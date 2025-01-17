@@ -1,1 +1,0 @@
-// mongodb+srv://sinha28shivam:sinha@shivam30@realtimechat.ovt2b.mongodb.net/?retryWrites=true&w=majority&appName=RealTimeChat

@@ -7,9 +7,10 @@ import {connectDB} from './src/lib/db.js';
 
 import authRoute from './src/routes/auth.route.js';
 import messageRoutes from './src/routes/message.route.js'
+import { app, server } from './src/lib/socket.js';
 
 dotenv.config();
-const app = express();
+
 
 // Constants
 const PORT = process.env.PORT || 3001;
@@ -26,9 +27,9 @@ app.use(
 
 // Routes
 app.use("/api/v0/auth", authRoute);
-app.use("/api/v0/message", messageRoutes)
+app.use("/api/v0/messages", messageRoutes)
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log('Server is running on PORT:', `https://localhost:${PORT}`);
   connectDB();
 });

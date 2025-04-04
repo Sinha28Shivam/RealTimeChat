@@ -3,11 +3,14 @@ import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 
+
 import {connectDB} from './src/lib/db.js';
 
 import authRoute from './src/routes/auth.route.js';
 import messageRoutes from './src/routes/message.route.js'
 import { app, server } from './src/lib/socket.js';
+
+
 
 dotenv.config();
 
